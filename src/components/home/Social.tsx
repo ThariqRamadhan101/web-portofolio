@@ -1,5 +1,4 @@
-import React from "react";
-import { FiTwitter, FiGithub, FiLinkedin } from "react-icons/fi";
+import { FiGithub, FiLinkedin } from "react-icons/fi";
 
 const Social = () => {
   return (

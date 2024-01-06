@@ -1,5 +1,5 @@
 import { HiOutlineArrowSmDown } from "react-icons/hi";
-import scrollLogo from "/src/assets/scroll.svg";
+
 const Scroll = () => {
   return (
     <div className="home__scroll">
