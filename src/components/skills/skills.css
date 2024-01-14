@@ -1,0 +1,36 @@
+.skills__container {
+  width: 750px;
+}
+
+.skills__card {
+  background-color: var(--container-color);
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  border-radius: 0.5rem;
+  margin-bottom: var(--mb-3);
+}
+
+.skills__img {
+  width: 150px;
+  height: 150px;
+  object-fit: contain;
+  border-radius: 1rem;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 10px;
+}
+
+.swiper-pagination-bullet {
+  background-color: var(--text-color) !important;
+}
+
+.swiper-pagination-bullet-active {
+  background-color: var(--title-color) !important;
+}
+
+/* BREAK POINTS */
+@media screen and (max-width: 992px) {
+  .skills__container {
+    width: initial;
+  }
+}

@@ -1,22 +1,32 @@
-import handLogo from "/src/assets/hand.svg";
-import sendLogo from "/src/assets/send.svg";
-const Data = () => {
+import handLogo from "../../assets/hand.svg";
+import { GrSend } from "react-icons/gr";
+
+interface DataProps {
+  handleHandHover: () => void;
+  handleHandLeave: () => void;
+}
+
+const Data: React.FC<DataProps> = ({ handleHandHover, handleHandLeave }) => {
   return (
     <div className="home__data">
       <h1 className="home__title">
         Thariq Ramadhan Alchandra Yasrial
-        <img src={handLogo} className="logo" alt="hand logo" />
+        <img
+          src={handLogo}
+          className="home__hand"
+          alt="hand logo"
+          onMouseEnter={handleHandHover}
+          onMouseLeave={handleHandLeave}
+        />
       </h1>
       <h3 className="home__subtitle">A Developer</h3>
       <p className="home__description">
-        Highly versatile and adaptable software engineer with a diverse skill
-        set across multiple programming languages, frameworks, and technology
-        domains.
+        Experienced developer proficient in various programming languages,
+        frameworks, and tech domains.
       </p>
 
       <a href="#contact" className="button button--flex">
-        Say Hello
-        <img src={sendLogo} className="logo" alt="send logo" />
+        Say Hello <GrSend className="logo" />
       </a>
     </div>
   );

@@ -150,6 +150,8 @@ img {
 
 .button__icon {
   margin-left: var(--mb-0-5);
+  width: 25px;
+  height: 25px;
 }
 
 .button--flex {

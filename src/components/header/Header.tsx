@@ -10,6 +10,7 @@ import {
   HiOutlineMenu,
   HiOutlineFolder,
 } from "react-icons/hi";
+import ReactTyped from "react-typed";
 
 const Header = () => {
   window.addEventListener("scroll", function () {
@@ -25,7 +26,15 @@ const Header = () => {
     <header className="header">
       <nav className="nav container">
         <a href="index.html" className="nav__logo">
-          Thariq Portofolio
+          <ReactTyped
+            strings={["Thariq", "Thoriq", "Toim"]}
+            typeSpeed={200}
+            loop
+            backDelay={5000}
+            backSpeed={50}
+            cursorChar="|"
+            showCursor={true}
+          />
         </a>
         <div className={Toggle ? "nav__menu show-menu" : "nav__menu"}>
           <ul className="nav__list grid">
@@ -55,10 +64,24 @@ const Header = () => {
             </li>
             <li className="nav__item">
               <a
-                href="#myJourney"
-                onClick={() => setActiveNav("#myJourney")}
+                href="#skills"
+                onClick={() => setActiveNav("#skills")}
                 className={
-                  activeNav === "#qualification"
+                  activeNav === "#skills"
+                    ? "nav__link active-link"
+                    : "nav__link"
+                }
+              >
+                <HiOutlineFolder className="nav__icon" />
+                Skills
+              </a>
+            </li>
+            <li className="nav__item">
+              <a
+                href="#journey"
+                onClick={() => setActiveNav("#journey")}
+                className={
+                  activeNav === "#journey"
                     ? "nav__link active-link"
                     : "nav__link"
                 }
@@ -69,30 +92,16 @@ const Header = () => {
             </li>
             <li className="nav__item">
               <a
-                href="#learning"
-                onClick={() => setActiveNav("#learning")}
+                href="#portofolio"
+                onClick={() => setActiveNav("#portofolio")}
                 className={
-                  activeNav === "#learning"
-                    ? "nav__link active-link"
-                    : "nav__link"
-                }
-              >
-                <HiOutlineFolder className="nav__icon" />
-                Learning
-              </a>
-            </li>
-            <li className="nav__item">
-              <a
-                href="#portfolio"
-                onClick={() => setActiveNav("#portfolio")}
-                className={
-                  activeNav === "#portfolio"
+                  activeNav === "#portofolio"
                     ? "nav__link active-link"
                     : "nav__link"
                 }
               >
                 <HiOutlinePhotograph className="nav__icon" />
-                Projects
+                Portofolio
               </a>
             </li>
             <li className="nav__item">

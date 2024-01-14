@@ -1,10 +1,10 @@
 .home__container {
-  row-gap: 7rem;
+  row-gap: 2rem;
 }
 
 .home__content {
   grid-template-columns: 116px repeat(2, 1fr);
-  padding-top: 5.5rem;
+  padding-top: 1.5rem;
   column-gap: 2rem;
   align-items: center;
 }
@@ -12,7 +12,7 @@
 .home__social {
   display: grid;
   grid-template-columns: max-content;
-  row-gap: 1rem;
+  row-gap: 2rem;
 }
 
 .home__social-icon {
@@ -30,9 +30,24 @@
 }
 
 .home__hand {
-  width: 38px;
-  height: 38px;
+  width: 40px;
+  height: 40px;
   margin-left: 0.4rem;
+  animation: wave 4s ease-in-out infinite;
+  transform-origin: bottom;
+}
+
+@keyframes wave {
+  0%,
+  100% {
+    transform: rotate(0deg);
+  }
+  25% {
+    transform: rotate(20deg);
+  }
+  75% {
+    transform: rotate(-20deg);
+  }
 }
 
 .home__subtitle {
@@ -59,17 +74,16 @@
 }
 
 .home__img {
-  background: url(../../assets//profile.jpeg);
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: cover;
+  border-radius: 60% 40% 30% 70%/60% 30% 70% 40%;
   filter: grayscale(0.5);
-  box-shadow: inset 0 0 0 9px rgba(0, 0, 0, 0.3);
+  box-shadow: inset 0 0 0 9px rgba(0, 0, 0, 0.5);
   order: 1;
   justify-self: center;
-  width: 300px;
-  height: 300px;
+  width: 325px;
+  height: 325px;
   animation: profile__animate 8s ease-in-out infinite 1s;
+  transition: background 0.3s ease, filter 0.3s ease, transform 0.3s ease,
+    box-shadow 0.3s ease;
 }
 
 @keyframes profile__animate {
@@ -85,7 +99,8 @@
 }
 
 .home__scroll {
-  margin-left: 9.25rem;
+  margin-top: 3rem;
+  margin-left: 7rem;
 }
 
 .wheel {
