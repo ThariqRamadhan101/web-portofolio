@@ -76,7 +76,7 @@
 .home__img {
   border-radius: 60% 40% 30% 70%/60% 30% 70% 40%;
   filter: grayscale(0.5);
-  box-shadow: inset 0 0 0 9px rgba(0, 0, 0, 0.5);
+  box-shadow: 0 5px 5px 5px rgba(0, 0, 0, 0.2);
   order: 1;
   justify-self: center;
   width: 325px;

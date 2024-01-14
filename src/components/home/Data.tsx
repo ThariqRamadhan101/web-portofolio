@@ -26,7 +26,7 @@ const Data: React.FC<DataProps> = ({ handleHandHover, handleHandLeave }) => {
       </p>
 
       <a href="#contact" className="button button--flex">
-        Say Hello <GrSend className="logo" />
+        Say Hello <GrSend className="button__icon" />
       </a>
     </div>
   );
