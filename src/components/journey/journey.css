@@ -1,5 +1,5 @@
 .journey__container {
-  max-width: 768px;
+  max-width: 968px;
 }
 
 .journey__tabs {
@@ -21,18 +21,18 @@
 }
 
 .journey__icon {
-  font-size: 1.8rem;
-  margin-right: var(--mb-0-25);
+  border-radius: 50%;
 }
 
 .journey__active {
   color: var(--title-color-dark);
 }
 
-.journey__sections {
+.journey__section {
   display: grid;
   grid-template-columns: 0.7fr;
   justify-content: center;
+  padding: 5rem 0 4rem;
 }
 
 .journey__content {
@@ -50,14 +50,12 @@
 }
 
 .journey__title {
-  font-size: var(--normal-font-size);
-  font-weight: var(--font-medium);
+  font-size: 1.2rem;
+  font-weight: bold;
 }
 
 .journey__subtitle {
-  display: inline-block;
-  font-size: var(--small-font-size);
-  margin-bottom: var(--mb-1);
+  font-size: 0.8rem !important;
 }
 
 .journey__calendar {
@@ -80,6 +78,10 @@
   transform: translate(6px, -7px);
 }
 
+.vertical-timeline-element-date {
+  padding: 15px !important;
+}
+
 /* BREAK POINTS */
 @media screen and (max-width: 992px) {
   .journey__container {
@@ -95,18 +97,15 @@
   }
 }
 
-@media screen and (max-width: 576px) {
+@media screen and (max-width: 460px) {
+  .journey__data {
+    gap: 0rem;
+  }
   .journey__sections {
     grid-template-columns: initial;
   }
 
   .journey__button {
     margin: 0 var(--mb-0-75);
-  }
-}
-
-@media screen and (max-width: 350px) {
-  .journey__data {
-    gap: 0.5rem;
   }
 }

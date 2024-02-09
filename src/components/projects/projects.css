@@ -1,11 +1,3 @@
-.project__filters {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  column-gap: 0.75rem;
-  margin-bottom: var(--mb-2);
-}
-
 .project__item {
   color: var(--title-color);
   padding: 0.25rem 0.75rem;
@@ -32,11 +24,13 @@
   border: 1px solid rgba(0, 0, 0, 0.1);
   padding: 1.25rem;
   border-radius: 1rem;
+  width: 350px;
 }
 
 .project__img {
-  width: 295px;
-  border-radius: 1rem;
+  max-width: 300px;
+  max-height: 200px;
+  border-radius: 0.7rem;
   margin-bottom: var(--mb-1);
 }
 
